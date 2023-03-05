@@ -1,0 +1,71 @@
+.taskList {
+  margin-bottom: 15px;
+  &-title {
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &-notfound {
+    color: #f62682;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &--item {
+      display: flex;
+      align-items: center;
+      gap: 0 5px;
+      &-check {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+      }
+      &-text {
+        font-size: 16px;
+        color: #000000;
+        font-weight: 400;
+      }
+      &-done {
+        color: #9999;
+        text-decoration: line-through;
+      }
+    }
+    &--action {
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+      span {
+        font-size: 16px;
+        background-color: #eee;
+        width: 22px;
+        height: 22px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .action-edit {
+        transition: all 0.25s linear;
+        &:hover {
+          background-color: #6a5af9;
+          color: #fff;
+        }
+      }
+      .action-remove {
+        transition: all 0.25s linear;
+        &:hover {
+          background-color: crimson;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
