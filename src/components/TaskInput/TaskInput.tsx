@@ -25,7 +25,7 @@ const TaskInput = ({ handleAddTodo, editTodos, currentTodos, handleFinishEditTod
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (name === '') {
+    if (name === '' && currentTodos === null) {
       return toast.error('Bạn hãy nhập công việc...!!')
     }
     if (currentTodos) {
